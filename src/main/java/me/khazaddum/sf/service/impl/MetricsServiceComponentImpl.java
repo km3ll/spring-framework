@@ -6,13 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MetricsServiceImpl implements IMetricsService {
+public class MetricsServiceComponentImpl implements IMetricsService {
 
-    private static final Logger log = LoggerFactory.getLogger(MetricsServiceImpl.class);
+    private static final Logger log = LoggerFactory.getLogger(MetricsServiceComponentImpl.class);
 
-    public MetricsServiceImpl() {
+    public MetricsServiceComponentImpl() {
         super();
-        log.info("Creating MetricsService");
+        log.info("Creating MetricsServiceComponentImpl");
     }
 
     @Override

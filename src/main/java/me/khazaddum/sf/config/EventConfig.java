@@ -1,15 +1,14 @@
 package me.khazaddum.sf.config;
 
-import me.khazaddum.sf.persistence.repository.ITopicRepository;
-import me.khazaddum.sf.persistence.repository.impl.TopicRepositoryImpl;
-import me.khazaddum.sf.service.IEventService;
-import me.khazaddum.sf.service.impl.EventServiceImpl;
+import me.khazaddum.sf.service.impl.MetricsServiceNoAnnotationImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
+@Import({EmailConfig.class})
 public class EventConfig {
 
     private static final Logger log = LoggerFactory.getLogger(EventConfig.class);
@@ -20,8 +19,8 @@ public class EventConfig {
     }
 
     @Bean
-    public IEventService eventService() {
-        return new EventServiceImpl();
+    public MetricsServiceNoAnnotationImpl metricsServiceNoAnnotation() {
+        return new MetricsServiceNoAnnotationImpl();
     }
 
 }
