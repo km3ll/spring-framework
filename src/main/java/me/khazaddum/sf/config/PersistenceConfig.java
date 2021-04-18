@@ -1,4 +1,4 @@
-package me.khazaddum.sf.configuration;
+package me.khazaddum.sf.config;
 
 import me.khazaddum.sf.persistence.repository.ITopicRepository;
 import me.khazaddum.sf.persistence.repository.impl.TopicRepositoryImpl;
