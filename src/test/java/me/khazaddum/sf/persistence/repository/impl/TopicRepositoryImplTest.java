@@ -17,10 +17,14 @@ class TopicRepositoryImplTest {
 
     @Test
     void findById_givenExistingId_returnsNonEmpty() {
+
         ITopicRepository repository = new TopicRepositoryImpl();
         Topic newTopic = new Topic(1101, "Movies");
+
         repository.save(newTopic);
+
         assertTrue(repository.findById(1101).isPresent());
+
     }
 
 }
