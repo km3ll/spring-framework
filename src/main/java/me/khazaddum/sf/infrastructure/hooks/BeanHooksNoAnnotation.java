@@ -8,11 +8,11 @@ public class BeanHooksNoAnnotation {
     private static final Logger LOG = LoggerFactory.getLogger(BeanHooksNoAnnotation.class);
 
     public void initialize() {
-        LOG.info("PostConstruct hook with no annotation");
+        LOG.info("PostConstruct hook called");
     }
 
     public void finalize() {
-        LOG.info("PreDestroy hook with no annotation");
+        LOG.info("PreDestroy hook called");
     }
 
 }
