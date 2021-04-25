@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class BeanComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(BeanComponent.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BeanComponent.class);
 
     public BeanComponent() {
         super();
-        log.info("Creating BeanComponent");
+        LOG.info("Creating BeanComponent");
     }
 
 }

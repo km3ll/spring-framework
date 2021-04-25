@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 
 public class BeanNoAnnotations {
 
-    private static final Logger log = LoggerFactory.getLogger(BeanNoAnnotations.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BeanNoAnnotations.class);
 
     public BeanNoAnnotations() {
         super();
-        log.info("Creating BeanNoAnnotations");
+        LOG.info("Creating BeanNoAnnotations");
     }
 
 }

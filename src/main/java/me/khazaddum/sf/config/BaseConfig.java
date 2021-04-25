@@ -3,7 +3,6 @@ package me.khazaddum.sf.config;
 import me.khazaddum.sf.infrastructure.component.BeanNoAnnotations;
 import me.khazaddum.sf.infrastructure.hooks.BeanHooksNoAnnotation;
 import me.khazaddum.sf.infrastructure.hooks.BeanHooksWithAnnotation;
-import me.khazaddum.sf.infrastructure.injection.BookServiceViaConstructorImpl;
 import me.khazaddum.sf.infrastructure.injection.BookServiceViaFieldImpl;
 import me.khazaddum.sf.infrastructure.injection.BookServiceViaSetterImpl;
 import org.slf4j.Logger;
@@ -15,11 +14,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BaseConfig {
 
-    private static final Logger log = LoggerFactory.getLogger(BaseConfig.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BaseConfig.class);
 
     public BaseConfig() {
         super();
-        log.info("Creating BaseConfig");
+        LOG.info("Creating BaseConfig");
     }
 
     /* Method's name becomes bean's name */

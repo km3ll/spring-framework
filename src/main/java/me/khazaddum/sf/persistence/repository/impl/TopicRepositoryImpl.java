@@ -13,13 +13,13 @@ import java.util.Optional;
 @Repository
 public class TopicRepositoryImpl implements ITopicRepository {
 
-    private static final Logger log = LoggerFactory.getLogger(TopicRepositoryImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TopicRepositoryImpl.class);
 
     private List<Topic> topics = new ArrayList<>();
 
     public TopicRepositoryImpl() {
         super();
-        log.info("Creating TopicRepository");
+        LOG.info("Creating TopicRepository");
     }
 
     @Override

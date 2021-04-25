@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Lazy
 public class BeanLazyComponent {
 
-    private static final Logger log = LoggerFactory.getLogger(BeanLazyComponent.class);
+    private static final Logger LOG = LoggerFactory.getLogger(BeanLazyComponent.class);
 
     public BeanLazyComponent() {
         super();
-        log.info("Creating BeanLazyComponent");
+        LOG.info("Creating BeanLazyComponent");
     }
 
 }
