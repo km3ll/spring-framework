@@ -12,7 +12,7 @@ public class BookServiceViaConstructorImpl implements IBookService {
     private final Book book;
 
     public BookServiceViaConstructorImpl(Book book) {
-        LOG.info("Creating BookServiceViaConstructorImpl");
+        LOG.info("Created");
         this.book = book;
     }
 

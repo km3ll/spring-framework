@@ -20,7 +20,7 @@ public class TopicServiceImpl implements ITopicService {
 
     public TopicServiceImpl() {
         super();
-        LOG.info("Creating TopicService");
+        LOG.info("Created");
     }
 
     @Override

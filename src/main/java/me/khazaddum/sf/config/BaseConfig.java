@@ -18,7 +18,7 @@ public class BaseConfig {
 
     public BaseConfig() {
         super();
-        LOG.info("Creating BaseConfig");
+        LOG.info("Created");
     }
 
     /* Method's name becomes bean's name */

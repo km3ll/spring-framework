@@ -12,12 +12,12 @@ public class BeanHooksWithAnnotation {
 
     @PostConstruct
     public void postConstruct() {
-        LOG.info("PostConstruct hook with annotation");
+        LOG.info("PostConstruct hook called");
     }
 
     @PreDestroy
     public void preDestroy() {
-        LOG.info("PreDestroy hook with annotation");
+        LOG.info("PreDestroy hook called");
     }
 
 }

@@ -9,7 +9,7 @@ public class BeanNoAnnotations {
 
     public BeanNoAnnotations() {
         super();
-        LOG.info("Creating BeanNoAnnotations");
+        LOG.info("Created");
     }
 
 }

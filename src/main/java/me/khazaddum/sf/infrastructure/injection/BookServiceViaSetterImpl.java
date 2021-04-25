@@ -15,7 +15,7 @@ public class BookServiceViaSetterImpl implements IBookService {
 
     public BookServiceViaSetterImpl() {
         super();
-        LOG.info("Creating BookServiceViaSetterImpl");
+        LOG.info("Created");
     }
 
 }

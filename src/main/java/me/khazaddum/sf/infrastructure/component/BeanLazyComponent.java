@@ -13,7 +13,7 @@ public class BeanLazyComponent {
 
     public BeanLazyComponent() {
         super();
-        LOG.info("Creating BeanLazyComponent");
+        LOG.info("Created");
     }
 
 }

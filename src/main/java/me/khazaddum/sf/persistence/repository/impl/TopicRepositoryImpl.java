@@ -19,7 +19,7 @@ public class TopicRepositoryImpl implements ITopicRepository {
 
     public TopicRepositoryImpl() {
         super();
-        LOG.info("Creating TopicRepository");
+        LOG.info("Created");
     }
 
     @Override

@@ -13,13 +13,13 @@ public class BookServiceViaFieldImpl implements IBookService {
 
     public BookServiceViaFieldImpl() {
         super();
-        LOG.info("Creating BookServiceViaSetterImpl");
+        LOG.info("Created");
     }
 
     @Autowired
     public void setBook(Book book) {
-        LOG.info("Setting Book");
         this.book = book;
+        LOG.info("Autowired");
     }
 
 }

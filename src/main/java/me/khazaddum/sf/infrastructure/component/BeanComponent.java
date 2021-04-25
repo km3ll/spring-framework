@@ -11,7 +11,7 @@ public class BeanComponent {
 
     public BeanComponent() {
         super();
-        LOG.info("Creating BeanComponent");
+        LOG.info("Created");
     }
 
 }
