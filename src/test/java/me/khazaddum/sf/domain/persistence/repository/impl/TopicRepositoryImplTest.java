@@ -1,9 +1,9 @@
-package me.khazaddum.sf.persistence.repository.impl;
+package me.khazaddum.sf.domain.persistence.repository.impl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import me.khazaddum.sf.persistence.model.Topic;
-import me.khazaddum.sf.persistence.repository.ITopicRepository;
+import me.khazaddum.sf.domain.persistence.model.Topic;
+import me.khazaddum.sf.domain.persistence.repository.ITopicRepository;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 

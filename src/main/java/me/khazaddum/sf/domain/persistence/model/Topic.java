@@ -1,4 +1,4 @@
-package me.khazaddum.sf.persistence.model;
+package me.khazaddum.sf.domain.persistence.model;
 
 import java.util.Objects;
 import java.util.Random;
