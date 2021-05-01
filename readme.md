@@ -20,7 +20,9 @@ mvn clean install
 @Import
 @Lazy
 @Override
+@Primary
 @Repository
+@Qualifier
 @Service
 @SpringBootApplication(scanBasePackages)
 

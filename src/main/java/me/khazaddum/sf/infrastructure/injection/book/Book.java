@@ -1,17 +1,29 @@
 package me.khazaddum.sf.infrastructure.injection.book;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
-
-@Component
 public class Book {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Book.class);
+    private String id;
+    private String name;
 
-    public Book() {
-        super();
-        LOG.info("Created");
+    public Book(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

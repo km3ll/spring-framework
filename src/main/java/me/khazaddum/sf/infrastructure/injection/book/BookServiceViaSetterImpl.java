@@ -11,11 +11,17 @@ public class BookServiceViaSetterImpl implements IBookService {
     private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaSetterImpl.class);
 
     @Autowired
-    private Book book;
+    private BookRepository bookRepository;
 
     public BookServiceViaSetterImpl() {
         super();
         LOG.info("Created");
+    }
+
+    @Override
+    public Book save(Book book) {
+        LOG.info("Book saved");
+        return bookRepository.save(book);
     }
 
 }

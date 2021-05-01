@@ -8,7 +8,7 @@ public class BookServiceViaFieldImpl implements IBookService {
 
     private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaFieldImpl.class);
 
-    private Book book;
+    private BookRepository bookRepository;
 
     public BookServiceViaFieldImpl() {
         super();
@@ -16,9 +16,15 @@ public class BookServiceViaFieldImpl implements IBookService {
     }
 
     @Autowired
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBookRepository(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
         LOG.info("Autowired");
+    }
+
+    @Override
+    public Book save(Book book) {
+        LOG.info("Book saved");
+        return bookRepository.save(book);
     }
 
 }
