@@ -22,7 +22,7 @@ public class ItemFactoryBean implements FactoryBean<Item> {
 
     @Override
     public Class<?> getObjectType() {
-        LOG.info("Running getObjectType");
+        //LOG.info("Running getObjectType");
         return Item.class;
     }
 
