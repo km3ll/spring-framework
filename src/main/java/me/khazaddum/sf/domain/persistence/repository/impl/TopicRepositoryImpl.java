@@ -1,7 +1,7 @@
-package me.khazaddum.sf.persistence.repository.impl;
+package me.khazaddum.sf.domain.persistence.repository.impl;
 
-import me.khazaddum.sf.persistence.model.Topic;
-import me.khazaddum.sf.persistence.repository.ITopicRepository;
+import me.khazaddum.sf.domain.persistence.model.Topic;
+import me.khazaddum.sf.domain.persistence.repository.ITopicRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

@@ -1,8 +1,8 @@
-package me.khazaddum.sf.service.impl;
+package me.khazaddum.sf.domain.service.impl;
 
-import me.khazaddum.sf.persistence.model.Topic;
-import me.khazaddum.sf.persistence.repository.ITopicRepository;
-import me.khazaddum.sf.service.ITopicService;
+import me.khazaddum.sf.domain.persistence.model.Topic;
+import me.khazaddum.sf.domain.persistence.repository.ITopicRepository;
+import me.khazaddum.sf.domain.service.ITopicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

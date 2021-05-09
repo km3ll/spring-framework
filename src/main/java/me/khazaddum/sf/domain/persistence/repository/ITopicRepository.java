@@ -1,6 +1,6 @@
-package me.khazaddum.sf.persistence.repository;
+package me.khazaddum.sf.domain.persistence.repository;
 
-import me.khazaddum.sf.persistence.model.Topic;
+import me.khazaddum.sf.domain.persistence.model.Topic;
 import java.util.Optional;
 
 public interface ITopicRepository {

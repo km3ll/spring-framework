@@ -1,6 +1,6 @@
-package me.khazaddum.sf.service;
+package me.khazaddum.sf.domain.service;
 
-import me.khazaddum.sf.persistence.model.Topic;
+import me.khazaddum.sf.domain.persistence.model.Topic;
 
 import java.util.Optional;
 
