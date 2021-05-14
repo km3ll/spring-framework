@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class ComponentEnvironment {
 
@@ -21,7 +23,14 @@ public class ComponentEnvironment {
     //@Value("${sequence.suffix}")
     private String suffix;
 
-    public ComponentEnvironment( @Autowired Environment environment) {
+
+    @PostConstruct
+    public void postConstruct() {
+        LOG.info("Active profiles: {}", environment.getActiveProfiles());
+        LOG.info("Default profiles: {}", environment.getDefaultProfiles());
+    }
+
+    public ComponentEnvironment( @Autowired Environment environment ) {
 
         this.environment = environment;
         this.prefix = environment.getProperty("sequence.prefix");
