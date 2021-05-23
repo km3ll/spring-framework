@@ -8,3 +8,9 @@ mvn test --debug
 mvn dependency:tree
 mvn clean install
 ```
+
+## endpoints
+
+```
+curl --location --request GET 'http://localhost:8080'
+```
