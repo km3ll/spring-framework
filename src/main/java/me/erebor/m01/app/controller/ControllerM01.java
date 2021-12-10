@@ -5,14 +5,11 @@ import me.erebor.m01.service.IProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
-@Controller
+@RestController
 public class ControllerM01 {
 
     private static final Logger LOG = LoggerFactory.getLogger(ControllerM01.class);
@@ -25,15 +22,21 @@ public class ControllerM01 {
     }
 
     @GetMapping("/project")
-    ResponseEntity<String> getProject(@RequestParam Long id) {
+    public ResponseEntity<Project> getProject(@RequestParam Long id) {
         Optional<Project> existingProject = projectService.findById(id);
         if (existingProject.isPresent()) {
-            return new ResponseEntity<>(existingProject.toString(), HttpStatus.OK);
+            return ResponseEntity.ok(existingProject.get());
         } else {
-            return new ResponseEntity<>(String.format("Project with id %s not found", id), HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
+        // functional style
+        // return existingProject.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    //TODO. Add POST endpoint
+    @PostMapping("/project")
+    public ResponseEntity<Project> saveProject(@RequestBody Project project) {
+        Project createdProject = projectService.save(project);
+        return ResponseEntity.ok(project);
+    }
 
 }
