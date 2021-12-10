@@ -1,8 +1,8 @@
-package m01.service.impl;
+package me.erebor.m01.service.impl;
 
-import m01.persistence.model.Project;
-import m01.persistence.repository.IProjectRepository;
-import m01.service.IProjectService;
+import me.erebor.m01.persistence.model.Project;
+import me.erebor.m01.persistence.repository.IProjectRepository;
+import me.erebor.m01.service.IProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

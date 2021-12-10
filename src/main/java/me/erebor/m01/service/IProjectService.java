@@ -1,6 +1,7 @@
-package m01.service;
+package me.erebor.m01.service;
 
-import m01.persistence.model.Project;
+import me.erebor.m01.persistence.model.Project;
+
 import java.util.Optional;
 
 public interface IProjectService {

@@ -1,4 +1,4 @@
-package m01;
+package me.erebor.m01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

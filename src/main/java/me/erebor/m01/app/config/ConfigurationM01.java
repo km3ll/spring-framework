@@ -1,4 +1,4 @@
-package m01.app.config;
+package me.erebor.m01.app.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

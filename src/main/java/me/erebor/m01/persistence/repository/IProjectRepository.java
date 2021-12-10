@@ -1,6 +1,6 @@
-package m01.persistence.repository;
+package me.erebor.m01.persistence.repository;
 
-import m01.persistence.model.Project;
+import me.erebor.m01.persistence.model.Project;
 
 import java.util.Optional;
 

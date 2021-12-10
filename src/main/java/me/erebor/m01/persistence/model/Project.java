@@ -1,4 +1,4 @@
-package m01.persistence.model;
+package me.erebor.m01.persistence.model;
 
 import java.time.LocalDate;
 import java.util.Objects;

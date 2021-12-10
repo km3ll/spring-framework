@@ -1,7 +1,7 @@
-package m01.app.controller;
+package me.erebor.m01.app.controller;
 
-import m01.persistence.model.Project;
-import m01.service.IProjectService;
+import me.erebor.m01.persistence.model.Project;
+import me.erebor.m01.service.IProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Controller
