@@ -11,6 +11,8 @@ mvn dependency:tree
 mvn clean install
 ```
 
+# Learn Spring
+
 ## endpoints
 
 ### module-01
@@ -31,6 +33,10 @@ curl --location --request GET 'localhost:8080/project?id=1100'
 
 ## references
 
+- [Bean annotations](https://www.baeldung.com/spring-bean-annotations)
+- [Bootstrapping](https://en.wikipedia.org/wiki/Bootstrapping)
+- [Component Scanning](https://www.baeldung.com/spring-component-scanning)
+- [Component, Repository, Service](https://www.baeldung.com/spring-component-repository-service)
 - [Consuming and Producing JSON](https://www.baeldung.com/spring-boot-json)
 - [Hooking](https://en.wikipedia.org/wiki/Hooking)
 - [Integration Tests by Fowler](https://martinfowler.com/bliki/IntegrationTest.html)
@@ -40,4 +46,5 @@ curl --location --request GET 'localhost:8080/project?id=1100'
 - [Spring Beans](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
 - [Spring Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)
 - [Spring Framework](https://spring.io/projects/spring-framework)
+- [Spring IoC Container](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
 - [TDD by Fowler](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
