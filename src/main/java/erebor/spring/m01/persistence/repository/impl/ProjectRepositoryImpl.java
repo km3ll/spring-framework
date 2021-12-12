@@ -1,7 +1,7 @@
-package spring.m01.persistence.repository.impl;
+package erebor.spring.m01.persistence.repository.impl;
 
-import spring.m01.persistence.model.Project;
-import spring.m01.persistence.repository.IProjectRepository;
+import erebor.spring.m01.persistence.model.Project;
+import erebor.spring.m01.persistence.repository.IProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
