@@ -1,5 +1,7 @@
-package me.khazaddum.spring.m02.domain;
+package me.khazaddum.spring.m02.domain.impl;
 
+import me.khazaddum.spring.m02.domain.IProjectRepository;
+import me.khazaddum.spring.m02.domain.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ProjectRepository {
+public class ProjectRepositoryImpl implements IProjectRepository {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ProjectRepository.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectRepositoryImpl.class);
 
 	private List<Project> projects = new ArrayList<Project>();
 
-	public ProjectRepository() {
+	public ProjectRepositoryImpl() {
 		LOG.info("Created");
 	}
 

@@ -1,6 +1,6 @@
 package me.khazaddum.spring.m02.config;
 
-import me.khazaddum.spring.m02.domain.ProjectRepository;
+import me.khazaddum.spring.m02.domain.impl.ProjectRepositoryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.*;
@@ -17,9 +17,9 @@ public class M02Config {
 
 	@Primary
 	@Bean
-	public ProjectRepository primaryProjectRepository() {
+	public ProjectRepositoryImpl primaryProjectRepository() {
 		LOG.info("Binding primary bean to context");
-		return new ProjectRepository();
+		return new ProjectRepositoryImpl();
 	}
 
 	/*
@@ -32,9 +32,9 @@ public class M02Config {
 	 */
 	@Lazy
 	@Bean
-	public ProjectRepository secondaryProjectRepository() {
+	public ProjectRepositoryImpl secondaryProjectRepository() {
 		LOG.info("Binding secondary bean to context");
-		return new ProjectRepository();
+		return new ProjectRepositoryImpl();
 	}
 
 }
