@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    name: Deploy modules
+    name: Deploy
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
