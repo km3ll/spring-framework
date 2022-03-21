@@ -22,7 +22,9 @@ jobs:
       run: mvn clean
     - name: Format
       run: mvn spring-javaformat:apply
-    - name: Compile
+    - name: Code Compile
       run: mvn compile
+    - name: Test Compile
+      run: mvn test-compile
     - name: Test
       run: mvn test

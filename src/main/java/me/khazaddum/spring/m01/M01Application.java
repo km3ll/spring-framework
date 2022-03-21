@@ -1,13 +1,13 @@
-package erebor.spring.m01;
+package me.khazaddum.spring.m01;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApplicationM01 {
+public class M01Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationM01.class, args);
+		SpringApplication.run(M01Application.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package erebor.spring.m01.persistence.model;
+package me.khazaddum.spring.m01.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;
