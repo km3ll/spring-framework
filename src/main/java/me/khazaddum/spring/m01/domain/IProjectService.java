@@ -1,6 +1,4 @@
-package erebor.spring.m01.service;
-
-import erebor.spring.m01.persistence.model.Project;
+package me.khazaddum.spring.m01.domain;
 
 import java.util.Optional;
 

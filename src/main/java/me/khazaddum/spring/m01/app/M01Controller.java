@@ -1,22 +1,21 @@
-package erebor.spring.m01.app.controller;
+package me.khazaddum.spring.m01.app;
 
-import erebor.spring.m01.persistence.model.Project;
-import erebor.spring.m01.service.IProjectService;
+import me.khazaddum.spring.m01.domain.IProjectService;
+import me.khazaddum.spring.m01.domain.Project;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-public class ControllerM01 {
+public class M01Controller {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ControllerM01.class);
+	private static final Logger LOG = LoggerFactory.getLogger(M01Controller.class);
 
 	private IProjectService projectService;
 
-	public ControllerM01(@Autowired IProjectService projectService) {
+	public M01Controller(IProjectService projectService) {
 		this.projectService = projectService;
 		LOG.info("Created");
 	}
@@ -30,9 +29,10 @@ public class ControllerM01 {
 		else {
 			return ResponseEntity.notFound().build();
 		}
-		// functional style
-		// return existingProject.map(ResponseEntity::ok).orElseGet(() ->
-		// ResponseEntity.notFound().build());
+		/*
+		 * Functional style return existingProject .map(ResponseEntity::ok) .orElseGet(()
+		 * -> ResponseEntity.notFound().build());
+		 */
 	}
 
 	@PostMapping("/project")
