@@ -1,4 +1,4 @@
-package me.erebor.m01.persistence.model;
+package erebor.spring.m01.persistence.model;
 
 import java.time.LocalDate;
 import java.util.Objects;

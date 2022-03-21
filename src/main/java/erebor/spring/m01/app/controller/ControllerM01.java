@@ -1,7 +1,7 @@
-package me.erebor.m01.app.controller;
+package erebor.spring.m01.app.controller;
 
-import me.erebor.m01.persistence.model.Project;
-import me.erebor.m01.service.IProjectService;
+import erebor.spring.m01.persistence.model.Project;
+import erebor.spring.m01.service.IProjectService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
