@@ -12,25 +12,25 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JavaEEConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(JavaEEConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(JavaEEConfig.class);
 
-    public JavaEEConfig() {
-        LOG.info("Created");
-    }
+	public JavaEEConfig() {
+		LOG.info("Created");
+	}
 
-    @Bean
-    public IAccountRepository accountRepositoryCacheImpl() {
-        return new AccountRepositoryCacheImpl();
-    }
+	@Bean
+	public IAccountRepository accountRepositoryCacheImpl() {
+		return new AccountRepositoryCacheImpl();
+	}
 
-    @Bean
-    public IAccountRepository accountRepositoryDbImpl() {
-        return new AccountRepositoryDbImpl();
-    }
+	@Bean
+	public IAccountRepository accountRepositoryDbImpl() {
+		return new AccountRepositoryDbImpl();
+	}
 
-    @Bean
-    public IAccountRepository accountRepositoryH2Impl() {
-        return new AccountRepositoryH2Impl();
-    }
+	@Bean
+	public IAccountRepository accountRepositoryH2Impl() {
+		return new AccountRepositoryH2Impl();
+	}
 
 }

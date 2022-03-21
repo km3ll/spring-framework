@@ -12,31 +12,33 @@ import java.util.Optional;
 @RestController
 public class ControllerM01 {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ControllerM01.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ControllerM01.class);
 
-    private IProjectService projectService;
+	private IProjectService projectService;
 
-    public ControllerM01(@Autowired IProjectService projectService) {
-        this.projectService = projectService;
-        LOG.info("Created");
-    }
+	public ControllerM01(@Autowired IProjectService projectService) {
+		this.projectService = projectService;
+		LOG.info("Created");
+	}
 
-    @GetMapping("/project")
-    public ResponseEntity<Project> getProject(@RequestParam Long id) {
-        Optional<Project> existingProject = projectService.findById(id);
-        if (existingProject.isPresent()) {
-            return ResponseEntity.ok(existingProject.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-        // functional style
-        // return existingProject.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
-    }
+	@GetMapping("/project")
+	public ResponseEntity<Project> getProject(@RequestParam Long id) {
+		Optional<Project> existingProject = projectService.findById(id);
+		if (existingProject.isPresent()) {
+			return ResponseEntity.ok(existingProject.get());
+		}
+		else {
+			return ResponseEntity.notFound().build();
+		}
+		// functional style
+		// return existingProject.map(ResponseEntity::ok).orElseGet(() ->
+		// ResponseEntity.notFound().build());
+	}
 
-    @PostMapping("/project")
-    public ResponseEntity<Project> saveProject(@RequestBody Project project) {
-        Project createdProject = projectService.save(project);
-        return ResponseEntity.ok(project);
-    }
+	@PostMapping("/project")
+	public ResponseEntity<Project> saveProject(@RequestBody Project project) {
+		Project createdProject = projectService.save(project);
+		return ResponseEntity.ok(project);
+	}
 
 }

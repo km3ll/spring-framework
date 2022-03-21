@@ -10,15 +10,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class ContextAwareComponent implements ApplicationContextAware {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ContextAwareComponent.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ContextAwareComponent.class);
 
-    public ContextAwareComponent() {
-        LOG.info("Created");
-    }
+	public ContextAwareComponent() {
+		LOG.info("Created");
+	}
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        LOG.info("Context with id '{}' set", applicationContext.getId());
-    }
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		LOG.info("Context with id '{}' set", applicationContext.getId());
+	}
 
 }

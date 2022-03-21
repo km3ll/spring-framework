@@ -13,18 +13,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class ContainerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ContainerBeanFactoryPostProcessor.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ContainerBeanFactoryPostProcessor.class);
 
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
+	@Override
+	public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory)
+			throws BeansException {
 
-        LOG.info("Initializing bean 'product': code '1100', name 'coffee'");
+		LOG.info("Initializing bean 'product': code '1100', name 'coffee'");
 
-        BeanDefinition bd = configurableListableBeanFactory.getBeanDefinition("product");
+		BeanDefinition bd = configurableListableBeanFactory.getBeanDefinition("product");
 
-        bd.getPropertyValues().add("code", 1100L);
-        bd.getPropertyValues().add("name", "coffee");
+		bd.getPropertyValues().add("code", 1100L);
+		bd.getPropertyValues().add("name", "coffee");
 
-    }
+	}
 
 }

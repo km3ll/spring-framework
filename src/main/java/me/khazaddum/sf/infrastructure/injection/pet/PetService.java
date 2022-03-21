@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class PetService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PetService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(PetService.class);
 
-    @Autowired
-    private PetRepository repository1;
+	@Autowired
+	private PetRepository repository1;
 
-    @Autowired
-    private PetRepository repository2;
+	@Autowired
+	private PetRepository repository2;
 
-    public PetService() {
-        LOG.info("Created");
-    }
+	public PetService() {
+		LOG.info("Created");
+	}
 
 }

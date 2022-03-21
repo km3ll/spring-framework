@@ -7,34 +7,35 @@ import javax.annotation.PostConstruct;
 
 public class Product {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Product.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Product.class);
 
-    private int code;
-    private String name;
+	private int code;
 
-    public Product() {
-        LOG.info("Created");
-    }
+	private String name;
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.info("Instance values: code={}, name={}", this.code, this.name);
-    }
+	public Product() {
+		LOG.info("Created");
+	}
 
-    public int getCode() {
-        return code;
-    }
+	@PostConstruct
+	public void postConstruct() {
+		LOG.info("Instance values: code={}, name={}", this.code, this.name);
+	}
 
-    public void setCode(int code) {
-        this.code = code;
-    }
+	public int getCode() {
+		return code;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setCode(int code) {
+		this.code = code;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 }

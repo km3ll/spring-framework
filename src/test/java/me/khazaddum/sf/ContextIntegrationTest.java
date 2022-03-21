@@ -12,29 +12,29 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringJUnitConfig( classes = TestConfig.class )
+@SpringJUnitConfig(classes = TestConfig.class)
 public class ContextIntegrationTest {
 
-    @Autowired
-    private ApplicationContext applicationContext;
+	@Autowired
+	private ApplicationContext applicationContext;
 
-    @Autowired
-    private GreetingServiceI greetingService;
+	@Autowired
+	private GreetingServiceI greetingService;
 
-    @MockBean
-    private GreetingRepository greetingRepository;
+	@MockBean
+	private GreetingRepository greetingRepository;
 
-    @Test
-    public void whenContextIsLoaded_thenNoExceptions() {
+	@Test
+	public void whenContextIsLoaded_thenNoExceptions() {
 
-    }
+	}
 
-    @Test
-    public void whenGreeting_thenOk() {
+	@Test
+	public void whenGreeting_thenOk() {
 
-        String greeting = greetingService.greet("John Wick");
-        assertNotNull(greeting);
+		String greeting = greetingService.greet("John Wick");
+		assertNotNull(greeting);
 
-    }
+	}
 
 }

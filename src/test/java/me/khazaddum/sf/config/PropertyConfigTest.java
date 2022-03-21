@@ -13,17 +13,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-
 @SpringJUnitConfig(value = Application.class)
-@TestPropertySource(locations = {"classpath:application.properties", "classpath:test.properties"})
+@TestPropertySource(locations = { "classpath:application.properties", "classpath:test.properties" })
 public class PropertyConfigTest {
 
-    @Value("${test.property}")
-    private String testProperty;
+	@Value("${test.property}")
+	private String testProperty;
 
-    @Test
-    public void whenTestPropertySource_thenValueRetrieved() {
-        assertEquals( "testdrive", testProperty );
-    }
+	@Test
+	public void whenTestPropertySource_thenValueRetrieved() {
+		assertEquals("testdrive", testProperty);
+	}
 
 }

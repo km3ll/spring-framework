@@ -5,41 +5,42 @@ import java.util.Random;
 
 public class Topic {
 
-    private Integer id;
-    private String name;
+	private Integer id;
 
-    public Topic(Integer id, String name) {
-        if (Objects.isNull(id)) {
-            id = new Random().nextInt();
-        }
-        this.id = id;
-        this.name = name;
-    }
+	private String name;
 
-    public Topic(Topic topic) {
-        this.id = topic.getId();
-        this.name = topic.getName();
-    }
+	public Topic(Integer id, String name) {
+		if (Objects.isNull(id)) {
+			id = new Random().nextInt();
+		}
+		this.id = id;
+		this.name = name;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public Topic(Topic topic) {
+		this.id = topic.getId();
+		this.name = topic.getName();
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    @Override
-    public String toString() {
-        return "Topic [ id=" + id + ", name='" + name + '\'' + "] \n";
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Topic [ id=" + id + ", name='" + name + '\'' + "] \n";
+	}
 
 }

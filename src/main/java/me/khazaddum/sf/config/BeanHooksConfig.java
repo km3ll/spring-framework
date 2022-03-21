@@ -14,20 +14,20 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class BeanHooksConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BeanHooksConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BeanHooksConfig.class);
 
-    public BeanHooksConfig() {
-        LOG.info("Created");
-    }
+	public BeanHooksConfig() {
+		LOG.info("Created");
+	}
 
-    @Bean
-    public BeanHooksWithAnnotation beanPostConstructWithAnnotation() {
-        return new BeanHooksWithAnnotation();
-    }
+	@Bean
+	public BeanHooksWithAnnotation beanPostConstructWithAnnotation() {
+		return new BeanHooksWithAnnotation();
+	}
 
-    @Bean(initMethod = "initialize", destroyMethod = "finalize")
-    public BeanHooksNoAnnotation beanPostConstructNoAnnotation() {
-        return new BeanHooksNoAnnotation();
-    }
+	@Bean(initMethod = "initialize", destroyMethod = "finalize")
+	public BeanHooksNoAnnotation beanPostConstructNoAnnotation() {
+		return new BeanHooksNoAnnotation();
+	}
 
 }

@@ -12,32 +12,31 @@ import java.util.Optional;
 @Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProjectRepositoryImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectRepositoryImpl.class);
 
-    private List<Project> projects = new ArrayList<Project>();
+	private List<Project> projects = new ArrayList<Project>();
 
-    public ProjectRepositoryImpl() {
-        LOG.info("Created");
-    }
+	public ProjectRepositoryImpl() {
+		LOG.info("Created");
+	}
 
-    @Override
-    public Optional<Project> findById(Long id) {
-        return projects.stream()
-            .filter(p -> p.getId().equals(id))
-            .findFirst();
-    }
+	@Override
+	public Optional<Project> findById(Long id) {
+		return projects.stream().filter(p -> p.getId().equals(id)).findFirst();
+	}
 
-    @Override
-    public Project save(Project project) {
-        Project existingProject = findById(project.getId()).orElse(null);
-        if (null == existingProject) {
-            projects.add(project);
-        } else {
-            projects.remove(project);
-            Project newProject = new Project(project);
-            projects.add(newProject);
-        }
-        return project;
-    }
+	@Override
+	public Project save(Project project) {
+		Project existingProject = findById(project.getId()).orElse(null);
+		if (null == existingProject) {
+			projects.add(project);
+		}
+		else {
+			projects.remove(project);
+			Project newProject = new Project(project);
+			projects.add(newProject);
+		}
+		return project;
+	}
 
 }

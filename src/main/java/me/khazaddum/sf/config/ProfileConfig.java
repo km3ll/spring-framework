@@ -10,16 +10,16 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class ProfileConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProfileConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProfileConfig.class);
 
-    public ProfileConfig() {
-        LOG.info("Created");
-    }
+	public ProfileConfig() {
+		LOG.info("Created");
+	}
 
-    @Bean
-    @Profile("dev")
-    public ProfileComponentC profileComponentC() {
-        return new ProfileComponentC();
-    }
+	@Bean
+	@Profile("dev")
+	public ProfileComponentC profileComponentC() {
+		return new ProfileComponentC();
+	}
 
 }

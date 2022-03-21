@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 
 public class AccountRepositoryDbImpl implements IAccountRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AccountRepositoryDbImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AccountRepositoryDbImpl.class);
 
-    public AccountRepositoryDbImpl() {
-        LOG.info("Created");
-    }
+	public AccountRepositoryDbImpl() {
+		LOG.info("Created");
+	}
 
 }

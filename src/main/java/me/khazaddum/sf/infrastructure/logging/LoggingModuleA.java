@@ -11,15 +11,15 @@ import javax.annotation.PostConstruct;
 @Profile("dev")
 public class LoggingModuleA {
 
-    private static final Logger LOG = LoggerFactory.getLogger(LoggingModuleA.class);
+	private static final Logger LOG = LoggerFactory.getLogger(LoggingModuleA.class);
 
-    public LoggingModuleA() {
-        LOG.debug("Created");
-    }
+	public LoggingModuleA() {
+		LOG.debug("Created");
+	}
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.debug("Post construct called");
-    }
+	@PostConstruct
+	public void postConstruct() {
+		LOG.debug("Post construct called");
+	}
 
 }

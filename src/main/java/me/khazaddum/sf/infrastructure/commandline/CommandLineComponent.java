@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class CommandLineComponent implements CommandLineRunner {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CommandLineComponent.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CommandLineComponent.class);
 
-    public CommandLineComponent() {
-        super();
-        LOG.info("Created");
-    }
+	public CommandLineComponent() {
+		super();
+		LOG.info("Created");
+	}
 
-    @Override
-    public void run(String... args) throws Exception {
-        LOG.info("Run");
-    }
+	@Override
+	public void run(String... args) throws Exception {
+		LOG.info("Run");
+	}
 
 }

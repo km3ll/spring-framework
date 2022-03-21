@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BaseConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BaseConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BaseConfig.class);
 
-    public BaseConfig() {
-        LOG.info("Created");
-    }
+	public BaseConfig() {
+		LOG.info("Created");
+	}
 
 }

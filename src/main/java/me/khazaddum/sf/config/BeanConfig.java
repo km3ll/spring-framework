@@ -10,16 +10,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BeanConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BeanConfig.class);
 
-    public BeanConfig() {
-        LOG.info("Created");
-    }
+	public BeanConfig() {
+		LOG.info("Created");
+	}
 
-    /* Method's name becomes bean's name */
-    @Bean
-    public BeanNoAnnotations beanNoAnnotations() {
-        return new BeanNoAnnotations();
-    }
+	/* Method's name becomes bean's name */
+	@Bean
+	public BeanNoAnnotations beanNoAnnotations() {
+		return new BeanNoAnnotations();
+	}
 
 }

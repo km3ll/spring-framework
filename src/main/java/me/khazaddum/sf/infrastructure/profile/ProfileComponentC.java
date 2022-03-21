@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 
 public class ProfileComponentC {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProfileComponentC.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProfileComponentC.class);
 
-    public ProfileComponentC() {
-        LOG.info("Created");
-    }
+	public ProfileComponentC() {
+		LOG.info("Created");
+	}
 
 }

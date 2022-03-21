@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 
 public class OwnerRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PetService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(PetService.class);
 
-    public OwnerRepository() {
-        LOG.info("Created");
-    }
+	public OwnerRepository() {
+		LOG.info("Created");
+	}
 
 }

@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BookServiceImplTest {
 
-    @Test
-    public void givenNewBook_thenSavedSuccess() {
+	@Test
+	public void givenNewBook_thenSavedSuccess() {
 
-        BookRepository bookRepository = new BookRepository();
-        IBookService bookService = new BookServiceViaConstructorImpl(bookRepository);
+		BookRepository bookRepository = new BookRepository();
+		IBookService bookService = new BookServiceViaConstructorImpl(bookRepository);
 
-        Book newBook = new Book("1100", "The Hobbit");
+		Book newBook = new Book("1100", "The Hobbit");
 
-        assertNotNull(bookService.save(newBook));
+		assertNotNull(bookService.save(newBook));
 
-    }
+	}
 
 }

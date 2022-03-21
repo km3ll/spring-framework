@@ -17,38 +17,40 @@ import java.lang.annotation.*;
 @Component
 public @interface Configuration {
  */
-@Import({BaseConfig.class})
+@Import({ BaseConfig.class })
 @Configuration
 public class RepositoryConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(RepositoryConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(RepositoryConfig.class);
 
-    public RepositoryConfig() {
-        LOG.info("Created");
-    }
+	public RepositoryConfig() {
+		LOG.info("Created");
+	}
 
-    /*
-    @Target({ElementType.METHOD, ElementType.ANNOTATION_TYPE})
-    @Retention(RetentionPolicy.RUNTIME)
-    @Documented
-    public @interface Bean {
-     */
-    @Bean
-    public ProjectRepository mainProjectRepository() {
-        return new ProjectRepository();
-    }
+	/*
+	 * @Target({ElementType.METHOD, ElementType.ANNOTATION_TYPE})
+	 *
+	 * @Retention(RetentionPolicy.RUNTIME)
+	 *
+	 * @Documented public @interface Bean {
+	 */
+	@Bean
+	public ProjectRepository mainProjectRepository() {
+		return new ProjectRepository();
+	}
 
-    /*
-    @Target({ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.FIELD})
-    @Retention(RetentionPolicy.RUNTIME)
-    @Documented
-    public @interface Lazy {
-     */
-    @Lazy
-    @Bean
-    public ProjectRepository secondaryProjectRepository() {
-        return new ProjectRepository();
-    }
-
+	/*
+	 * @Target({ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR,
+	 * ElementType.PARAMETER, ElementType.FIELD})
+	 *
+	 * @Retention(RetentionPolicy.RUNTIME)
+	 *
+	 * @Documented public @interface Lazy {
+	 */
+	@Lazy
+	@Bean
+	public ProjectRepository secondaryProjectRepository() {
+		return new ProjectRepository();
+	}
 
 }

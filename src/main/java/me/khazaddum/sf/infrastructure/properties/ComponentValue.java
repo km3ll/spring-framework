@@ -8,18 +8,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ComponentValue {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ComponentValue.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ComponentValue.class);
 
-    private String prefix;
+	private String prefix;
 
-    private String suffix;
+	private String suffix;
 
-    public ComponentValue(
-        @Value("${sequence.prefix}") String prefix,
-        @Value("${sequence.suffix}") String suffix) {
-        this.prefix = prefix;
-        this.suffix = suffix;
-        LOG.info("Created with prefix '{}' and suffix '{}'", prefix, suffix);
-    }
+	public ComponentValue(@Value("${sequence.prefix}") String prefix, @Value("${sequence.suffix}") String suffix) {
+		this.prefix = prefix;
+		this.suffix = suffix;
+		LOG.info("Created with prefix '{}' and suffix '{}'", prefix, suffix);
+	}
 
 }

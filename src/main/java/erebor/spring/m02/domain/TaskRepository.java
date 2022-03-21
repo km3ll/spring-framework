@@ -17,30 +17,29 @@ public @interface Repository {
 @Repository
 public class TaskRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(TaskRepository.class);
+	private static final Logger LOG = LoggerFactory.getLogger(TaskRepository.class);
 
-    private List<Task> tasks = new ArrayList<Task>();
+	private List<Task> tasks = new ArrayList<Task>();
 
-    public TaskRepository() {
-        LOG.info("Created");
-    }
+	public TaskRepository() {
+		LOG.info("Created");
+	}
 
-    public Optional<Task> findById(Long id) {
-        return tasks.stream()
-            .filter(p -> p.getId().equals(id))
-            .findFirst();
-    }
+	public Optional<Task> findById(Long id) {
+		return tasks.stream().filter(p -> p.getId().equals(id)).findFirst();
+	}
 
-    public Task save(Task task) {
-        Task existingTask = findById(task.getId()).orElse(null);
-        if (null == existingTask) {
-            tasks.add(task);
-        } else {
-            tasks.remove(task);
-            Task newTask = new Task(task);
-            tasks.add(newTask);
-        }
-        return task;
-    }
+	public Task save(Task task) {
+		Task existingTask = findById(task.getId()).orElse(null);
+		if (null == existingTask) {
+			tasks.add(task);
+		}
+		else {
+			tasks.remove(task);
+			Task newTask = new Task(task);
+			tasks.add(newTask);
+		}
+		return task;
+	}
 
 }

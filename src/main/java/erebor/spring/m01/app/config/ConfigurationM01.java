@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ConfigurationM01 {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ConfigurationM01.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ConfigurationM01.class);
 
-    public ConfigurationM01() {
-        LOG.info("Created");
-    }
+	public ConfigurationM01() {
+		LOG.info("Created");
+	}
 
 }

@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class AuthorRepositoryAImpl implements IAuthorRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AuthorRepositoryAImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AuthorRepositoryAImpl.class);
 
-    public AuthorRepositoryAImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public AuthorRepositoryAImpl() {
+		super();
+		LOG.info("Created");
+	}
 
 }

@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("me.khazaddum.sf.infrastructure.testing")
 public class TestConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(TestConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(TestConfig.class);
 
-    public TestConfig() {
-        LOG.info("Created");
-    }
+	public TestConfig() {
+		LOG.info("Created");
+	}
 
 }

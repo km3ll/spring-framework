@@ -9,11 +9,11 @@ import org.springframework.stereotype.Repository;
 @Primary
 public class CategoryRepositoryBImpl implements ICategoryRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CategoryRepositoryBImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CategoryRepositoryBImpl.class);
 
-    public CategoryRepositoryBImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public CategoryRepositoryBImpl() {
+		super();
+		LOG.info("Created");
+	}
 
 }
