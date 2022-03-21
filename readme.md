@@ -23,6 +23,7 @@ mvn dependency:tree
 
 ## References
 
+- Actuators [[>]](https://docs.spring.io/spring-boot/docs/2.5.6/reference/html/actuator.html)
 - Bean annotations [[>]](https://www.baeldung.com/spring-bean-annotations)
 - Bootstrapping [[>]](https://en.wikipedia.org/wiki/Bootstrapping)
 - Component Scanning [[>]](https://www.baeldung.com/spring-component-scanning)
