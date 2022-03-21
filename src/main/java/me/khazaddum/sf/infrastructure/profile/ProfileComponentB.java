@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @Profile("prod")
 public class ProfileComponentB {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProfileComponentB.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProfileComponentB.class);
 
-    public ProfileComponentB() {
-        LOG.info("Created");
-    }
+	public ProfileComponentB() {
+		LOG.info("Created");
+	}
 
 }

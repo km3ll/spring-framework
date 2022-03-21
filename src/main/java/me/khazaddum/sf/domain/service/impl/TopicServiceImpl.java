@@ -13,24 +13,24 @@ import java.util.Optional;
 @Service
 public class TopicServiceImpl implements ITopicService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(TopicServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(TopicServiceImpl.class);
 
-    @Autowired
-    private ITopicRepository topicRepository;
+	@Autowired
+	private ITopicRepository topicRepository;
 
-    public TopicServiceImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public TopicServiceImpl() {
+		super();
+		LOG.info("Created");
+	}
 
-    @Override
-    public Optional<Topic> findById(Integer id) {
-        return topicRepository.findById(id);
-    }
+	@Override
+	public Optional<Topic> findById(Integer id) {
+		return topicRepository.findById(id);
+	}
 
-    @Override
-    public Topic save(Topic topic) {
-        return topicRepository.save(topic);
-    }
+	@Override
+	public Topic save(Topic topic) {
+		return topicRepository.save(topic);
+	}
 
 }

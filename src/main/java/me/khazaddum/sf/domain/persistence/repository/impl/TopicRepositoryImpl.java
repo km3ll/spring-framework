@@ -13,33 +13,32 @@ import java.util.Optional;
 @Repository
 public class TopicRepositoryImpl implements ITopicRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(TopicRepositoryImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(TopicRepositoryImpl.class);
 
-    private List<Topic> topics = new ArrayList<>();
+	private List<Topic> topics = new ArrayList<>();
 
-    public TopicRepositoryImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public TopicRepositoryImpl() {
+		super();
+		LOG.info("Created");
+	}
 
-    @Override
-    public Optional<Topic> findById(Integer id) {
-        return topics.stream()
-            .filter( p -> p.getId().equals(id) )
-            .findFirst();
-    }
+	@Override
+	public Optional<Topic> findById(Integer id) {
+		return topics.stream().filter(p -> p.getId().equals(id)).findFirst();
+	}
 
-    @Override
-    public Topic save(Topic topic) {
-        Topic existingTopic = findById(topic.getId()).orElse(null);
-        if (existingTopic == null) {
-            topics.add(topic);
-        } else {
-            topics.remove(topic);
-            Topic newTopic = new Topic(topic);
-            topics.add(newTopic);
-        }
-        return topic;
-    }
+	@Override
+	public Topic save(Topic topic) {
+		Topic existingTopic = findById(topic.getId()).orElse(null);
+		if (existingTopic == null) {
+			topics.add(topic);
+		}
+		else {
+			topics.remove(topic);
+			Topic newTopic = new Topic(topic);
+			topics.add(newTopic);
+		}
+		return topic;
+	}
 
 }

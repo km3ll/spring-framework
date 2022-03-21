@@ -18,15 +18,19 @@ public class Application {
 
 		SpringApplication.run(Application.class, args);
 
-		/* Trigger PreDestroy hook
-		 * ConfigurableApplicationContext context = SpringApplication.run(new Class[]{Application.class, Config.class}, args);
-		 * context.close(); */
+		/*
+		 * Trigger PreDestroy hook ConfigurableApplicationContext context =
+		 * SpringApplication.run(new Class[]{Application.class, Config.class}, args);
+		 * context.close();
+		 */
 
 		// Another context
-		// When created, its BeanFactory is empty; the context does not know where to scan for beans.
+		// When created, its BeanFactory is empty; the context does not know where to scan
+		// for beans.
 
 		// 1. Scanning a package
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("me.khazaddum.sf.infrastructure.context.component");
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
+				"me.khazaddum.sf.infrastructure.context.component");
 		LOG.info("Context ctx created with id '{}'", ctx.getId());
 
 		LOG.info("Context ctx active before close: {}", ctx.isActive());
@@ -36,7 +40,8 @@ public class Application {
 		LOG.info("Context ctx active after close: {}", ctx.isActive());
 
 		// 2. Using the scan() method
-		// AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+		// AnnotationConfigApplicationContext ctx = new
+		// AnnotationConfigApplicationContext();
 		// ctx.scan("me.khazaddum.sf.infrastructure.context.component");
 
 	}

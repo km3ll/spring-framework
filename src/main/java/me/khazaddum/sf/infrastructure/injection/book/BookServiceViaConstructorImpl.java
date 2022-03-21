@@ -9,19 +9,19 @@ import java.util.List;
 @Service
 public class BookServiceViaConstructorImpl implements IBookService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaConstructorImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaConstructorImpl.class);
 
-    private final BookRepository bookRepository;
+	private final BookRepository bookRepository;
 
-    public BookServiceViaConstructorImpl(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-        LOG.info("Created");
-    }
+	public BookServiceViaConstructorImpl(BookRepository bookRepository) {
+		this.bookRepository = bookRepository;
+		LOG.info("Created");
+	}
 
-    @Override
-    public Book save(Book book) {
-        LOG.info("Book saved");
-        return bookRepository.save(book);
-    }
+	@Override
+	public Book save(Book book) {
+		LOG.info("Book saved");
+		return bookRepository.save(book);
+	}
 
 }

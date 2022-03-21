@@ -8,20 +8,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookServiceViaSetterImpl implements IBookService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaSetterImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaSetterImpl.class);
 
-    @Autowired
-    private BookRepository bookRepository;
+	@Autowired
+	private BookRepository bookRepository;
 
-    public BookServiceViaSetterImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public BookServiceViaSetterImpl() {
+		super();
+		LOG.info("Created");
+	}
 
-    @Override
-    public Book save(Book book) {
-        LOG.info("Book saved");
-        return bookRepository.save(book);
-    }
+	@Override
+	public Book save(Book book) {
+		LOG.info("Book saved");
+		return bookRepository.save(book);
+	}
 
 }

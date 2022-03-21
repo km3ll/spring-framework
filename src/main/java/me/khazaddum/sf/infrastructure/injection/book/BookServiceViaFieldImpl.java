@@ -6,25 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class BookServiceViaFieldImpl implements IBookService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaFieldImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookServiceViaFieldImpl.class);
 
-    private BookRepository bookRepository;
+	private BookRepository bookRepository;
 
-    public BookServiceViaFieldImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public BookServiceViaFieldImpl() {
+		super();
+		LOG.info("Created");
+	}
 
-    @Autowired
-    public void setBookRepository(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-        LOG.info("Autowired");
-    }
+	@Autowired
+	public void setBookRepository(BookRepository bookRepository) {
+		this.bookRepository = bookRepository;
+		LOG.info("Autowired");
+	}
 
-    @Override
-    public Book save(Book book) {
-        LOG.info("Book saved");
-        return bookRepository.save(book);
-    }
+	@Override
+	public Book save(Book book) {
+		LOG.info("Book saved");
+		return bookRepository.save(book);
+	}
 
 }

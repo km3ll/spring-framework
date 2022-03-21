@@ -10,20 +10,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BookConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookConfig.class);
 
-    public BookConfig() {
-        LOG.info("Created");
-    }
+	public BookConfig() {
+		LOG.info("Created");
+	}
 
-    @Bean
-    public BookServiceViaSetterImpl bookServiceViaSetter() {
-        return new BookServiceViaSetterImpl();
-    }
+	@Bean
+	public BookServiceViaSetterImpl bookServiceViaSetter() {
+		return new BookServiceViaSetterImpl();
+	}
 
-    @Bean
-    public BookServiceViaFieldImpl bookServiceViaField() {
-        return new BookServiceViaFieldImpl();
-    }
+	@Bean
+	public BookServiceViaFieldImpl bookServiceViaField() {
+		return new BookServiceViaFieldImpl();
+	}
 
 }

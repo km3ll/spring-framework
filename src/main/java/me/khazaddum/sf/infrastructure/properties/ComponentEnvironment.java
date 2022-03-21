@@ -12,32 +12,31 @@ import javax.annotation.PostConstruct;
 @Component
 public class ComponentEnvironment {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ComponentEnvironment.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ComponentEnvironment.class);
 
-    //@Autowired
-    private Environment environment;
+	// @Autowired
+	private Environment environment;
 
-    //@Value("${sequence.prefix}")
-    private String prefix;
+	// @Value("${sequence.prefix}")
+	private String prefix;
 
-    //@Value("${sequence.suffix}")
-    private String suffix;
+	// @Value("${sequence.suffix}")
+	private String suffix;
 
+	@PostConstruct
+	public void postConstruct() {
+		LOG.info("Active profiles: {}", environment.getActiveProfiles());
+		LOG.info("Default profiles: {}", environment.getDefaultProfiles());
+	}
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.info("Active profiles: {}", environment.getActiveProfiles());
-        LOG.info("Default profiles: {}", environment.getDefaultProfiles());
-    }
+	public ComponentEnvironment(@Autowired Environment environment) {
 
-    public ComponentEnvironment( @Autowired Environment environment ) {
+		this.environment = environment;
+		this.prefix = environment.getProperty("sequence.prefix");
+		this.suffix = environment.getProperty("sequence.suffix");
 
-        this.environment = environment;
-        this.prefix = environment.getProperty("sequence.prefix");
-        this.suffix = environment.getProperty("sequence.suffix");
+		LOG.info("Created with prefix '{}' and suffix '{}' from environment", prefix, suffix);
 
-        LOG.info("Created with prefix '{}' and suffix '{}' from environment", prefix, suffix);
-
-    }
+	}
 
 }

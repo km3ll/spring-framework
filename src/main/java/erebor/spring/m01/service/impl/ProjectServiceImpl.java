@@ -11,23 +11,23 @@ import java.util.Optional;
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProjectServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectServiceImpl.class);
 
-    private IProjectRepository projectRepository;
+	private IProjectRepository projectRepository;
 
-    public ProjectServiceImpl(IProjectRepository projectRepository) {
-        this.projectRepository = projectRepository;
-        LOG.info("Created");
-    }
+	public ProjectServiceImpl(IProjectRepository projectRepository) {
+		this.projectRepository = projectRepository;
+		LOG.info("Created");
+	}
 
-    @Override
-    public Optional<Project> findById(Long id) {
-        return projectRepository.findById(id);
-    }
+	@Override
+	public Optional<Project> findById(Long id) {
+		return projectRepository.findById(id);
+	}
 
-    @Override
-    public Project save(Project project) {
-        return projectRepository.save(project);
-    }
+	@Override
+	public Project save(Project project) {
+		return projectRepository.save(project);
+	}
 
 }

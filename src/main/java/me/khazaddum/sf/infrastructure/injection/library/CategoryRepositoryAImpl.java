@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class CategoryRepositoryAImpl implements ICategoryRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CategoryRepositoryAImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(CategoryRepositoryAImpl.class);
 
-    public CategoryRepositoryAImpl() {
-        super();
-        LOG.info("Created");
-    }
+	public CategoryRepositoryAImpl() {
+		super();
+		LOG.info("Created");
+	}
 
 }

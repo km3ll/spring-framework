@@ -26,8 +26,8 @@ public @interface SpringBootApplication {
 @SpringBootApplication
 public class ApplicationM02 {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ApplicationM02.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ApplicationM02.class, args);
+	}
 
 }

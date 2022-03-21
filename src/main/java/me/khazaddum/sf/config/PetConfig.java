@@ -12,22 +12,22 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class PetConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PetConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(PetConfig.class);
 
-    public PetConfig() {
-        LOG.info("Created");
-    }
+	public PetConfig() {
+		LOG.info("Created");
+	}
 
-    @Bean
-    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-    public OwnerRepository ownerRepository() {
-        return new OwnerRepository();
-    }
+	@Bean
+	@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+	public OwnerRepository ownerRepository() {
+		return new OwnerRepository();
+	}
 
-    @Bean
-    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public PetRepository categoryRepository() {
-        return new PetRepository();
-    }
+	@Bean
+	@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+	public PetRepository categoryRepository() {
+		return new PetRepository();
+	}
 
 }

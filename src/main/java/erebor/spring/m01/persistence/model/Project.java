@@ -5,56 +5,54 @@ import java.util.Objects;
 
 public class Project {
 
-    private Long id;
-    private String name;
-    private LocalDate dateCreated;
+	private Long id;
 
-    public Project(Long id, String name, LocalDate dateCreated) {
-        this.id = id;
-        this.name = name;
-        this.dateCreated = dateCreated;
-    }
+	private String name;
 
-    public Project(Project project) {
-        this(project.getId(), project.getName(), project.getDateCreated());
-    }
+	private LocalDate dateCreated;
 
-    public Long getId() {
-        return id;
-    }
+	public Project(Long id, String name, LocalDate dateCreated) {
+		this.id = id;
+		this.name = name;
+		this.dateCreated = dateCreated;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Project(Project project) {
+		this(project.getId(), project.getName(), project.getDateCreated());
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public LocalDate getDateCreated() {
-        return dateCreated;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, dateCreated);
-    }
+	public LocalDate getDateCreated() {
+		return dateCreated;
+	}
 
-    @Override
-    public String toString() {
-        return "Project{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", dateCreated=" + dateCreated +
-                '}';
-    }
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, dateCreated);
+	}
+
+	@Override
+	public String toString() {
+		return "Project{" + "id=" + id + ", name='" + name + '\'' + ", dateCreated=" + dateCreated + '}';
+	}
 
 }

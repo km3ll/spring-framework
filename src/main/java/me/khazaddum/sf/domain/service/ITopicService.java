@@ -6,8 +6,8 @@ import java.util.Optional;
 
 public interface ITopicService {
 
-    public Optional<Topic> findById(Integer id);
+	public Optional<Topic> findById(Integer id);
 
-    public Topic save(Topic topic);
+	public Topic save(Topic topic);
 
 }

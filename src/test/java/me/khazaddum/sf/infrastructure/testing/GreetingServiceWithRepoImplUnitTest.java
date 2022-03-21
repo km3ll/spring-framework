@@ -12,21 +12,21 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class GreetingServiceWithRepoImplUnitTest {
 
-    @Mock
-    GreetingRepository greetingRepository;
+	@Mock
+	GreetingRepository greetingRepository;
 
-    @InjectMocks
-    GreetingServiceWithRepo greetingServiceWithRepo;
+	@InjectMocks
+	GreetingServiceWithRepo greetingServiceWithRepo;
 
-    @Test
-    public void whenGreeting_ThenOk() {
+	@Test
+	public void whenGreeting_ThenOk() {
 
-        String mocked = "Hola, ";
-        when(greetingRepository.getGreeting()).thenReturn("Hola, ");
+		String mocked = "Hola, ";
+		when(greetingRepository.getGreeting()).thenReturn("Hola, ");
 
-        String greeting = greetingServiceWithRepo.greet( "John Wick" );
-        assertEquals( "Hola, John Wick", greeting)  ;
+		String greeting = greetingServiceWithRepo.greet("John Wick");
+		assertEquals("Hola, John Wick", greeting);
 
-    }
+	}
 
 }

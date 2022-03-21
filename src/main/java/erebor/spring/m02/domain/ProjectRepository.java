@@ -8,30 +8,29 @@ import java.util.Optional;
 
 public class ProjectRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProjectRepository.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectRepository.class);
 
-    private List<Project> projects = new ArrayList<Project>();
+	private List<Project> projects = new ArrayList<Project>();
 
-    public ProjectRepository() {
-        LOG.info("Created");
-    }
+	public ProjectRepository() {
+		LOG.info("Created");
+	}
 
-    public Optional<Project> findById(Long id) {
-        return projects.stream()
-            .filter(p -> p.getId().equals(id))
-            .findFirst();
-    }
+	public Optional<Project> findById(Long id) {
+		return projects.stream().filter(p -> p.getId().equals(id)).findFirst();
+	}
 
-    public Project save(Project project) {
-        Project existingProject = findById(project.getId()).orElse(null);
-        if (null == existingProject) {
-            projects.add(project);
-        } else {
-            projects.remove(project);
-            Project newProject = new Project(project);
-            projects.add(newProject);
-        }
-        return project;
-    }
+	public Project save(Project project) {
+		Project existingProject = findById(project.getId()).orElse(null);
+		if (null == existingProject) {
+			projects.add(project);
+		}
+		else {
+			projects.remove(project);
+			Project newProject = new Project(project);
+			projects.add(newProject);
+		}
+		return project;
+	}
 
 }

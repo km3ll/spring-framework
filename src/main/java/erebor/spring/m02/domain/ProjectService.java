@@ -16,21 +16,21 @@ public @interface Service {
 @Service
 public class ProjectService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ProjectService.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectService.class);
 
-    private ProjectRepository projectRepository;
+	private ProjectRepository projectRepository;
 
-    public ProjectService(ProjectRepository projectRepository) {
-        this.projectRepository = projectRepository;
-        LOG.info("Created");
-    }
+	public ProjectService(ProjectRepository projectRepository) {
+		this.projectRepository = projectRepository;
+		LOG.info("Created");
+	}
 
-    public Optional<Project> findById(Long id) {
-        return projectRepository.findById(id);
-    }
+	public Optional<Project> findById(Long id) {
+		return projectRepository.findById(id);
+	}
 
-    public Project save(Project project) {
-        return projectRepository.save(project);
-    }
+	public Project save(Project project) {
+		return projectRepository.save(project);
+	}
 
 }

@@ -9,24 +9,24 @@ import org.springframework.stereotype.Component;
 
 public class ContainerStaticBeanPostProcessor implements BeanPostProcessor {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ContainerStaticBeanPostProcessor.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ContainerStaticBeanPostProcessor.class);
 
-    @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("product")) {
-            Product product = (Product) bean;
-            LOG.info("Before initializing bean 'product'");
-        }
-        return bean;
-    }
+	@Override
+	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		if (beanName.equals("product")) {
+			Product product = (Product) bean;
+			LOG.info("Before initializing bean 'product'");
+		}
+		return bean;
+	}
 
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("product")) {
-            Product product = (Product) bean;
-            LOG.info("Order {}, after initializing bean 'product'");
-        }
-        return bean;
-    }
+	@Override
+	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+		if (beanName.equals("product")) {
+			Product product = (Product) bean;
+			LOG.info("Order {}, after initializing bean 'product'");
+		}
+		return bean;
+	}
 
 }

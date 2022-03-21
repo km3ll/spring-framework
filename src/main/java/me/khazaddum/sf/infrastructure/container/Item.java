@@ -7,34 +7,36 @@ import javax.annotation.PostConstruct;
 
 public class Item {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Item.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Item.class);
 
-    private int id;
-    private String name;
+	private int id;
 
-    public Item(int id, String name) {
-        this.id = id;
-        this.name = name;
-        LOG.info("Created with id={}, name={}", id, name);
-    }
+	private String name;
 
-    public Item() {
-        LOG.info("Created");
-    }
+	public Item(int id, String name) {
+		this.id = id;
+		this.name = name;
+		LOG.info("Created with id={}, name={}", id, name);
+	}
 
-    public int getId() {
-        return id;
-    }
+	public Item() {
+		LOG.info("Created");
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

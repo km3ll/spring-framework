@@ -4,8 +4,8 @@ import org.springframework.stereotype.Repository;
 
 public class GreetingRepository {
 
-    public String getGreeting() {
-        return "Hello there, ";
-    }
+	public String getGreeting() {
+		return "Hello there, ";
+	}
 
 }

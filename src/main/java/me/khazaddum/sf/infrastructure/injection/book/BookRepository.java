@@ -9,19 +9,19 @@ import java.util.List;
 @Repository
 public class BookRepository {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BookRepository.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookRepository.class);
 
-    private List<Book> books = new ArrayList<>();
+	private List<Book> books = new ArrayList<>();
 
-    public BookRepository() {
-        super();
-        LOG.info("Created");
-    }
+	public BookRepository() {
+		super();
+		LOG.info("Created");
+	}
 
-    public Book save(Book book) {
-        books.add(book);
-        LOG.info("Book saved");
-        return book;
-    }
+	public Book save(Book book) {
+		books.add(book);
+		LOG.info("Book saved");
+		return book;
+	}
 
 }

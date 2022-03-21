@@ -8,16 +8,16 @@ import javax.annotation.PreDestroy;
 
 public class BeanHooksWithAnnotation {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BeanHooksWithAnnotation.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BeanHooksWithAnnotation.class);
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.info("PostConstruct hook called");
-    }
+	@PostConstruct
+	public void postConstruct() {
+		LOG.info("PostConstruct hook called");
+	}
 
-    @PreDestroy
-    public void preDestroy() {
-        LOG.info("PreDestroy hook called");
-    }
+	@PreDestroy
+	public void preDestroy() {
+		LOG.info("PreDestroy hook called");
+	}
 
 }

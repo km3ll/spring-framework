@@ -10,29 +10,31 @@ import org.springframework.stereotype.Component;
 @Component
 public class ContainerSecondBeanPostProcessor implements BeanPostProcessor, Ordered {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ContainerSecondBeanPostProcessor.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ContainerSecondBeanPostProcessor.class);
 
-    @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("product")) {
-            Product product = (Product) bean;
-            LOG.info("Order {}, before initializing bean 'product': code={}, name={}", getOrder(), product.getCode(), product.getName());
-        }
-        return bean;
-    }
+	@Override
+	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+		if (beanName.equals("product")) {
+			Product product = (Product) bean;
+			LOG.info("Order {}, before initializing bean 'product': code={}, name={}", getOrder(), product.getCode(),
+					product.getName());
+		}
+		return bean;
+	}
 
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if (beanName.equals("product")) {
-            Product product = (Product) bean;
-            LOG.info("Order {}, after initializing bean 'product': code={}, name={}", getOrder(), product.getCode(), product.getName());
-        }
-        return bean;
-    }
+	@Override
+	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+		if (beanName.equals("product")) {
+			Product product = (Product) bean;
+			LOG.info("Order {}, after initializing bean 'product': code={}, name={}", getOrder(), product.getCode(),
+					product.getName());
+		}
+		return bean;
+	}
 
-    @Override
-    public int getOrder() {
-        return 2;
-    }
+	@Override
+	public int getOrder() {
+		return 2;
+	}
 
 }

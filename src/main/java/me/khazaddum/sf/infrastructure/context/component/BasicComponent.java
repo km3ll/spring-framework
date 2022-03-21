@@ -10,20 +10,20 @@ import javax.annotation.PreDestroy;
 @Component
 public class BasicComponent {
 
-    private static final Logger LOG = LoggerFactory.getLogger(BasicComponent.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BasicComponent.class);
 
-    public BasicComponent() {
-        LOG.info("Created");
-    }
+	public BasicComponent() {
+		LOG.info("Created");
+	}
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.info("postConstruct called");
-    }
+	@PostConstruct
+	public void postConstruct() {
+		LOG.info("postConstruct called");
+	}
 
-    @PreDestroy
-    public void preDestroy() {
-        LOG.info("preDestroy called");
-    }
+	@PreDestroy
+	public void preDestroy() {
+		LOG.info("preDestroy called");
+	}
 
 }

@@ -10,21 +10,21 @@ import org.junit.jupiter.api.Test;
 @Tag("unit")
 class TopicRepositoryImplTest {
 
-    @Test
-    void findById_givenDummyId_returnsEmpty() {
-        assertFalse(new TopicRepositoryImpl().findById(1100).isPresent());
-    }
+	@Test
+	void findById_givenDummyId_returnsEmpty() {
+		assertFalse(new TopicRepositoryImpl().findById(1100).isPresent());
+	}
 
-    @Test
-    void findById_givenExistingId_returnsNonEmpty() {
+	@Test
+	void findById_givenExistingId_returnsNonEmpty() {
 
-        ITopicRepository repository = new TopicRepositoryImpl();
-        Topic newTopic = new Topic(1101, "Movies");
+		ITopicRepository repository = new TopicRepositoryImpl();
+		Topic newTopic = new Topic(1101, "Movies");
 
-        repository.save(newTopic);
+		repository.save(newTopic);
 
-        assertTrue(repository.findById(1101).isPresent());
+		assertTrue(repository.findById(1101).isPresent());
 
-    }
+	}
 
 }
