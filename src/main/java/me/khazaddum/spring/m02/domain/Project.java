@@ -1,4 +1,4 @@
-package erebor.spring.m02.domain;
+package me.khazaddum.spring.m02.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package erebor.spring.m02.config;
+package me.khazaddum.spring.m02.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,8 @@
-package erebor.spring.m02.domain;
+package me.khazaddum.spring.m02.domain;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
