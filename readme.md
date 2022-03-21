@@ -29,6 +29,7 @@ mvn dependency:tree
 - Component Scanning [[>]](https://www.baeldung.com/spring-component-scanning)
 - Component, Repository, Service [[>]](https://www.baeldung.com/spring-component-repository-service)
 - Consuming and Producing JSON [[>]](https://www.baeldung.com/spring-boot-json)
+- Garbage collection [[>]](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science))
 - Hooking [[>]](https://en.wikipedia.org/wiki/Hooking)
 - Integration Tests by Fowler [[>]](https://martinfowler.com/bliki/IntegrationTest.html)
 - IoC by Fowler [[>]](https://martinfowler.com/articles/injection.html)
