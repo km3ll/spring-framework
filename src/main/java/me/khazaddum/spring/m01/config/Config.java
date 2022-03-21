@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class M01Config {
+public class Config {
 
-	private static final Logger LOG = LoggerFactory.getLogger(M01Config.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Config.class);
 
-	public M01Config() {
+	public Config() {
 		LOG.info("Created");
 	}
 

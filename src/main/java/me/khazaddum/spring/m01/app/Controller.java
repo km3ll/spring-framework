@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-public class M01Controller {
+public class Controller {
 
-	private static final Logger LOG = LoggerFactory.getLogger(M01Controller.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Controller.class);
 
 	private IProjectService projectService;
 
-	public M01Controller(IProjectService projectService) {
+	public Controller(IProjectService projectService) {
 		this.projectService = projectService;
 		LOG.info("Created");
 	}

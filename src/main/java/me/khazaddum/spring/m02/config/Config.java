@@ -5,13 +5,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.*;
 
-@Import({ BaseConfig.class })
+@Import({ Basic.class })
 @Configuration
-public class M02Config {
+public class Config {
 
-	private static final Logger LOG = LoggerFactory.getLogger(M02Config.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Config.class);
 
-	public M02Config() {
+	public Config() {
 		LOG.info("Created");
 	}
 
