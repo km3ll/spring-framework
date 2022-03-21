@@ -10,6 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/*
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Repository {
+ */
 @Repository
 public class ProjectRepositoryImpl implements IProjectRepository {
 
@@ -21,6 +28,11 @@ public class ProjectRepositoryImpl implements IProjectRepository {
 		LOG.info("Created");
 	}
 
+	/*
+	 * @Target(ElementType.METHOD)
+	 *
+	 * @Retention(RetentionPolicy.SOURCE) public @interface Override {
+	 */
 	@Override
 	public Optional<Project> findById(Long id) {
 		return projects.stream().filter(p -> p.getId().equals(id)).findFirst();

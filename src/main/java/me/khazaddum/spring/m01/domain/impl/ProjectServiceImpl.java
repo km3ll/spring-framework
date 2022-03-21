@@ -9,6 +9,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+/*
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Service {
+ */
 @Service
 public class ProjectServiceImpl implements IProjectService {
 
