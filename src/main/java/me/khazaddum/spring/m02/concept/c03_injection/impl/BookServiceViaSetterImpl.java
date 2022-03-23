@@ -5,6 +5,7 @@ import me.khazaddum.spring.m02.concept.c03_injection.IBookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -27,7 +28,7 @@ public class BookServiceViaSetterImpl implements IBookService {
 	 * @Documented
 	 */
 	@Autowired
-	public void setBookRepository(IBookRepository bookRepository) {
+	public void setBookRepository(@Qualifier("bookRepositoryImplTwo") IBookRepository bookRepository) {
 		this.bookRepository = bookRepository;
 	}
 

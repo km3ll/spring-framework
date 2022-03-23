@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BookRepositoryImpl implements IBookRepository {
+public class BookRepositoryImplTwo implements IBookRepository {
 
-	private static final Logger LOG = LoggerFactory.getLogger(BookRepositoryImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(BookRepositoryImplTwo.class);
 
-	public BookRepositoryImpl() {
+	public BookRepositoryImplTwo() {
 		LOG.info("Created");
 	}
 
