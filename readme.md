@@ -36,6 +36,7 @@ mvn dependency:tree
 - Maven Transitive Dependencies [[>]](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies)
 - SLF4J Simple Logging Facade for Java [[>]](http://www.slf4j.org/)
 - Spring Beans [[>]](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
+- Spring Beans Scope [[>]](https://www.baeldung.com/spring-bean-scopes)
 - Spring Configuration [[>]](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)
 - Spring Framework [[>]](https://spring.io/projects/spring-framework)
 - Spring IoC Container [[>]](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
