@@ -1,4 +1,4 @@
-package me.khazaddum.sf.infrastructure.container;
+package me.khazaddum.spring.m02.concept.c04_container;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,20 +9,22 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ContainerBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
+public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ContainerBeanFactoryPostProcessor.class);
+	private static final Logger LOG = LoggerFactory.getLogger(MyBeanFactoryPostProcessor.class);
+
+	private static final String BEAN_NAME = "beta";
+
+	public MyBeanFactoryPostProcessor() {
+		LOG.info("Created");
+	}
 
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory)
 			throws BeansException {
 
-		LOG.info("Initializing bean 'product': code '1100', name 'coffee'");
-
-		BeanDefinition bd = configurableListableBeanFactory.getBeanDefinition("product");
-
-		bd.getPropertyValues().add("code", 1100L);
-		bd.getPropertyValues().add("name", "coffee");
+		BeanDefinition bd = configurableListableBeanFactory.getBeanDefinition(BEAN_NAME);
+		bd.getPropertyValues().add("status", "modified");
 
 	}
 
