@@ -13,25 +13,25 @@ import javax.annotation.PreDestroy;
 @Service
 public class ContextServiceImpl implements IContextService, ApplicationContextAware {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ContextServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ContextServiceImpl.class);
 
-    public ContextServiceImpl() {
-        LOG.info("Created");
-    }
+	public ContextServiceImpl() {
+		LOG.info("Created");
+	}
 
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        LOG.info("Context with ID '{}' set", applicationContext.getId());
-    }
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		LOG.info("Context with ID '{}' set", applicationContext.getId());
+	}
 
-    @PostConstruct
-    public void postConstruct() {
-        LOG.info("PostConstruct called");
-    }
+	@PostConstruct
+	public void postConstruct() {
+		LOG.info("PostConstruct called");
+	}
 
-    @PreDestroy
-    public void preDestroy() {
-        LOG.info("PreDestroy called");
-    }
+	@PreDestroy
+	public void preDestroy() {
+		LOG.info("PreDestroy called");
+	}
 
 }
