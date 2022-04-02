@@ -15,6 +15,9 @@ mvn clean compile
 mvn spring-javaformat:apply    
 mvn test --debug
 mvn dependency:tree
+mvn spring-boot:run -Dstart-class=me.khazaddum.spring.m01.M01Application
+mvn package -Dstart-class=me.khazaddum.spring.m01.M01Application
+java -jar <artifact-name>
 ```
 
 ## Modules
