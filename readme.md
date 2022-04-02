@@ -33,6 +33,7 @@ mvn dependency:tree
 - Hooking [[>]](https://en.wikipedia.org/wiki/Hooking)
 - Integration Tests by Fowler [[>]](https://martinfowler.com/bliki/IntegrationTest.html)
 - IoC by Fowler [[>]](https://martinfowler.com/articles/injection.html)
+- Logback [[>]](https://logback.qos.ch/)
 - Maven Transitive Dependencies [[>]](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies)
 - SLF4J Simple Logging Facade for Java [[>]](http://www.slf4j.org/)
 - Spring Beans [[>]](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans)
