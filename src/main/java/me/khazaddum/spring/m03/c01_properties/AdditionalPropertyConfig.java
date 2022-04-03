@@ -12,18 +12,18 @@ import javax.annotation.PostConstruct;
 @PropertySource("classpath:additional.properties")
 public class AdditionalPropertyConfig {
 
-    private static final Logger LOG = LoggerFactory.getLogger(AdditionalPropertyConfig.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AdditionalPropertyConfig.class);
 
-    @Value("${additional.info}")
-    private String additionalInfo;
+	@Value("${additional.info}")
+	private String additionalInfo;
 
-    public AdditionalPropertyConfig() {
-        LOG.info("Created");
-    }
+	public AdditionalPropertyConfig() {
+		LOG.info("Created");
+	}
 
-    @PostConstruct
-    private void postConstruct() {
-        LOG.info("Additional info '{}'", additionalInfo);
-    }
+	@PostConstruct
+	private void postConstruct() {
+		LOG.info("Additional info '{}'", additionalInfo);
+	}
 
 }
