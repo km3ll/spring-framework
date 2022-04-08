@@ -1,4 +1,4 @@
-package me.khazaddum.sf.infrastructure.profile;
+package me.khazaddum.spring.m03.c02_profiles;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Profile("dev")
-public class ProfileComponentA {
+public class ProfileCompDev {
 
-	private static final Logger LOG = LoggerFactory.getLogger(ProfileComponentA.class);
+	private static final Logger LOG = LoggerFactory.getLogger(ProfileCompDev.class);
 
-	public ProfileComponentA() {
+	public ProfileCompDev() {
 		LOG.info("Created");
 	}
 
